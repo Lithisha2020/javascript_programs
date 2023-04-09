@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        var pin = 6891;
+        var chance = 4;
+        do{
+            var input = +prompt('Enter 4 digit pin:');
+            if(input === pin){
+                alert(`valid pin`);
+                break;
+            } else{
+                if(chance>1)
+                    alert(`Invalid pin. Try again!`);
+                else
+                    alert(`Invalid pin. Contact Admin!`);
+                chance -= 1;
+            }
+        }while(chance > 0);
+    </script>
+</body>
+</html>
