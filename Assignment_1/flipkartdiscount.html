@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let grossamount = +prompt("Enter gross amount");
+        let netamount = 0;
+
+        if(grossamount > 5000)
+            netamount = grossamount - (grossamount * (10/100));
+        else if(grossamount > 2000)
+            netamount = grossamount - (grossamount * (5/100));
+        else if(grossamount <= 2000)
+            netamount = grossamount;
+
+        console.log(`Gross amount ${grossamount} and Net amount ${netamount}`);
+    </script>
+</body>
+</html>

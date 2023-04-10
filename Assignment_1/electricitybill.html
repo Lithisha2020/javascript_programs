@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let unitsused = +prompt("Enter units consumed");
+        let totalcost = 0;
+        let slab1 = 0;
+        let slab2 = 0;
+        let slab3 = 0;
+        if(unitsused <= 100){
+            slab1 = unitsused;
+        } else{
+            slab1 = 100;
+            if(unitsused <= 200){
+                slab2 = unitsused - 100;
+            }
+            else{
+                slab2 = 100;
+                slab3 = unitsused - 200;
+            }
+        }
+        totalcost = (slab1 * 2) + (slab2 * 3) + (slab3 * 5);
+        console.log(`Electricity bill for consumption ${unitsused} is ${totalcost}`);
+    </script>
+</body>
+</html>
