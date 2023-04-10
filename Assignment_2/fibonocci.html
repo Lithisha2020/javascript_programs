@@ -20,7 +20,10 @@
             }
             return(fib_mock[n] = fibonocci(n-1,fib_mock) + fibonocci(n-2,fib_mock));
         }
-        document.write(`Fibonocci series: ${fibonocci(num)}`);
+        document.write(`Here is the Fibonacci series upto to ${num} terms:<br/>`);
+        for(var i=0;i<num;i++){
+            document.write(`${fibonocci(i)} `);
+        }
     </script>
 </body>
 </html>
