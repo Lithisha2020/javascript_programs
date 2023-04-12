@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use script'
+        var str1 = prompt("Enter first string:");
+        var str2 = prompt("Enter second string:");
+        var isanagram = true;
+        for(var s of str1){
+            if(!str2.includes(s)){
+                isanagram = false;
+            }
+        }
+        if(isanagram)
+            document.write(`${str1} is anagram of ${str2}`);
+        else
+            document.write(`${str1} is not anagram of ${str2}`);
+    </script>
+</body>
+</html>
