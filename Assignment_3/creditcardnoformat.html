@@ -13,7 +13,8 @@
         if(data.length != 16)
             document.write(`${data} is not a valid credit card number`);
         else{
-            document.write(`${data.slice(0,4)}-${data.slice(4,8)}-${data.slice(8,12)}-${data.slice(12,16)}`);
+            //document.write(`${data.slice(0,4)}-${data.slice(4,8)}-${data.slice(8,12)}-${data.slice(12,16)}`);
+            document.write(`${data.match(/.{1,4}/g).join("-")}`);
         }
     </script>
 </body>

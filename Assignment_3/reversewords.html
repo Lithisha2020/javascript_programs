@@ -11,14 +11,17 @@
         'use strict';
         //'This is javascript class' -> 'class javascript is this'
         var str = prompt('Enter a string:');
-        var separtor = " ";
-        var splitdata = str.split(separtor);
-        console.log(splitdata);
-        var reverse = "";
-        for(var data of splitdata){
-            console.log(data);
-            reverse = data + separtor + reverse;
-        }
+        // var separtor = " ";
+        // var splitdata = str.split(separtor);
+        // console.log(splitdata);
+        // var reverse = "";
+        // for(var data of splitdata){
+        //     console.log(data);
+        //     reverse = data + separtor + reverse;
+        // }
+
+        let reverse = str.split(" ").reverse().join(" ");
+        
         document.write(`Reverse of words<br/>input: ${str}<br/>output: ${reverse}`);
     </script>
 </body>

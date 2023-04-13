@@ -12,13 +12,17 @@
         var str1 = prompt("Enter first string:");
         var str2 = prompt("Enter second string:");
         var isanagram = true;
-        for(var s of str1){
-            if(!str2.includes(s)){
-                isanagram = false;
+        if(str1.length == str2.length)
+        {
+            for(var s of str1){
+                document.write(s+"<br/>");
+                if(!str2.includes(s)){
+                    isanagram = false;
+                }
             }
         }
         if(isanagram)
-            document.write(`${str1} is anagram of ${str2}`);
+            document.write(`<br/>${str1} is anagram of ${str2}`);
         else
             document.write(`${str1} is not anagram of ${str2}`);
     </script>
