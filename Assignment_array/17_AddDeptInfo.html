@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let employees = [
+        { eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+        { eId: 104, name: "reena", sal: 8000, gender: "female" },
+        { eId: 105, name: "lithisha", sal: 8000, gender: "female" },
+      ];
+
+      let departments = [
+        { eId: 101, dept: "sales" },
+        { eId: 104, dept: "marketing" },
+      ];
+
+      employees.map((emp)=>{
+        var dept = departments.find((dept) => dept.eId == emp.eId);
+        if(dept != undefined){
+            emp.dept = dept.dept;
+        }else{
+            emp.dept = '';
+        }
+      });
+
+      console.table(employees);
+    </script>
+  </body>
+</html>

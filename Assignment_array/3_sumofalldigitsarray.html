@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //sum of array elements
+      "use strict";
+      var arr = [11, 22, 33, 44];
+      var result = arr.reduce((sum, cur) => {
+        sum += cur;
+        return sum;
+      });
+      console.log(arr);
+      console.log(`Sum of elements in array is ${result}`);
+
+      var sumofdigits = arr.reduce((sum, cur) => {
+        do {
+            sum += cur % 10;
+            cur = parseInt(cur / 10);
+        } while (cur > 0);
+        return sum;
+      }, 0);
+      console.log(`Sum of digits in array is ${sumofdigits}`);
+    </script>
+  </body>
+</html>

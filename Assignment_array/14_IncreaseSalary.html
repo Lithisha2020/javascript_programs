@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //Increase salary by 500
+        let employees = [
+            {Id:5, Name:"Saranya", Salary: 5000},
+            {Id:3, Name:"Rakshu", Salary: 4500},
+            {Id:1, Name:"Lithisha", Salary: 6000},
+            {Id:4, Name:"Jaishree", Salary: 7600},
+            {Id:6, Name:"Priyanka", Salary: 4600},
+            {Id:2, Name:"Akash", Salary: 9000},
+        ];
+
+        //using foreach
+        console.log("Before foreach");
+        console.table(employees);
+
+        
+        employees.forEach((e)=> e.Salary += 500);
+        console.log("After foreach");
+        console.table(employees);
+
+        console.log("Before map");
+        console.table(employees);
+       
+        //using map        
+        employees.map((e) => {
+            e.Salary += 500;
+        });
+       
+        console.log("After map");
+        console.table(employees);
+
+        // let numarr = [10,20,30,40,50];
+        // numarr.forEach((ele, ind)=> numarr[ind] = ele + 5);
+        // console.log(numarr);
+        // numarr = numarr.map((e)=> e += 5);
+        // console.log(numarr);
+    </script>
+</body>
+</html>

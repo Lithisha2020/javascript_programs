@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      var arr = [92, 78, 94, 95, 85];
+      arr.sort();
+      console.log(arr);
+      
+      console.log(`Second largest number using negative index is ${arr.at(-2)}`);
+
+      console.log(`Second largest number using length property is ${arr.at(arr.length-2)}`);
+
+      arr.reverse();
+      console.log(`Second largest number is ${arr.at(1)}`);      
+    </script>
+  </body>
+</html>
