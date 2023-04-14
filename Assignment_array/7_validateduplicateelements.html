@@ -9,23 +9,13 @@
   <body>
     <script>
       "use strict";
-      function hasduplicatedata(num) {
-        let isvalid = true;
-        for (var n of num) {
-          if (num.indexOf(n) != num.lastIndexOf(n)) {
-            isvalid = false;
-            break;
-          }
-        }
-        if (isvalid) {
-          return "Yes";
-        } else {
-            return "No";
-        }
-      }
 
-      console.log(hasduplicatedata([1, 4, 2, 4, 1, 3, 6, 3]));
-      console.log(hasduplicatedata([1, 4, 2]));
+      var num = [1, 2, 3, 4, 2, 5];
+
+      var result = num.some((ele, pos) =>  num.lastIndexOf(ele) != pos);
+
+      if (result) console.log("yes");
+      else console.log("no");
     </script>
   </body>
 </html>

@@ -10,12 +10,8 @@
     <script>
       "use strict";
       var num = [1, 4, 2, 4, 1, 3, 6, 3];
-      for(var n of num){
-        if(num.indexOf(n) == num.lastIndexOf(n)){
-            console.log(`First non repeated number is ${n}`);
-            break;
-        }
-      }
+      var result = num.find((ele, pos) => pos == num.lastIndexOf(ele));
+      console.log(result);
     </script>
   </body>
 </html>

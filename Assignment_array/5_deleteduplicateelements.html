@@ -9,18 +9,19 @@
 <body>
     <script>
         'use strict';
-        let arr = [1, 6, 3, 2, 4, 3, 5, 1, 2, 4, 5, 6];
-        arr.forEach((ele, ind, array)=>{
-            console.log(ele + " - " + ind + " - " + array);
-            var lastindex = arr.lastIndexOf(ele)
-            if(ind != lastindex){
-                delete arr[lastindex];
-            }
-        });
+        let arr = [1, 6, 3, 2, 4, 3, 5, 1, 2, 4, 5, 6];        
+        let result = arr.filter((ele, pos) => arr.lastIndexOf(ele) == pos);        
+        console.log(result);
 
-        arr = arr.flat();
-        
-        console.log(arr);
+        // arr.forEach((ele, ind, array)=>{
+        //     console.log(ele + " - " + ind + " - " + array);
+        //     var lastindex = arr.lastIndexOf(ele)
+        //     if(ind != lastindex){
+        //         delete arr[lastindex];
+        //     }
+        // });
+        // arr = arr.flat();
+        // console.log(arr);
     </script>
 </body>
 </html>

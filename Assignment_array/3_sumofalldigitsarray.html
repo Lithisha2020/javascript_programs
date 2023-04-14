@@ -11,21 +11,9 @@
       //sum of array elements
       "use strict";
       var arr = [11, 22, 33, 44];
-      var result = arr.reduce((sum, cur) => {
-        sum += cur;
-        return sum;
-      });
+      var result = arr.reduce((sum, cur) => sum + cur);
       console.log(arr);
       console.log(`Sum of elements in array is ${result}`);
-
-      var sumofdigits = arr.reduce((sum, cur) => {
-        do {
-            sum += cur % 10;
-            cur = parseInt(cur / 10);
-        } while (cur > 0);
-        return sum;
-      }, 0);
-      console.log(`Sum of digits in array is ${sumofdigits}`);
     </script>
   </body>
 </html>

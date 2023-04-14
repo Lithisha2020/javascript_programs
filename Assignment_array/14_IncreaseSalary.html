@@ -19,24 +19,15 @@
             {Id:2, Name:"Akash", Salary: 9000},
         ];
 
-        //using foreach
-        console.log("Before foreach");
-        console.table(employees);
-
-        
+        //using foreach       
         employees.forEach((e)=> e.Salary += 500);
-        console.log("After foreach");
         console.table(employees);
 
-        console.log("Before map");
-        console.table(employees);
-       
         //using map        
         employees.map((e) => {
             e.Salary += 500;
         });
        
-        console.log("After map");
         console.table(employees);
 
         // let numarr = [10,20,30,40,50];

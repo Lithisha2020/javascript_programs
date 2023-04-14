@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    'use strict';
-        var animals = ['cat','lion','dog','zebra','elephant'];
-        var pets = ['cat','Dog','rabbit','fish','birds'];
-        var common = [];
-        animals.forEach((ele)=>{
-            if(pets.includes(ele)){
-                common.push(ele);
+  </head>
+  <body>
+    <script>
+      "use strict";
+      var animals = ["cat", "lion", "dog", "zebra", "elephant"];
+      var pets = ["cat", "Dog", "rabbit", "fish", "birds"];
+      for (var animal of animals) {
+        for (var pet of pets) {
+            if(pet == animal){
+                console.log(pet);
             }
-        });
-        console.log(common);
-</body>
+        }
+      }
+    </script>
+  </body>
 </html>

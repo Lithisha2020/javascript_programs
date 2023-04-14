@@ -12,12 +12,19 @@
       let input = [2, 5, 1, 4, 9, 6, 3, 7];
       input.sort();
       console.log(input);
-      input.reduce((prev, curr) => {
-        if(curr - prev != 1){
-            console.log(prev+1);
+      for (var ind in input) {
+        if (input[ind] + 1 != input[ind + 1]) {
+          console.log(input[ind] + 1);
+          break;
         }
-        return curr;
-      });
+      }
+
+      // input.reduce((prev, curr) => {
+      //   if(curr - prev != 1){
+      //       console.log(prev+1);
+      //   }
+      //   return curr;
+      // });
     </script>
   </body>
 </html>

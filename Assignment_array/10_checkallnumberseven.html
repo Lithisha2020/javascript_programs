@@ -9,25 +9,10 @@
   <body>
     <script>
       "use strict";
-
-      function isevenarray(num) {
-        var iseven = true;
-        for (var n of num) {
-          if (n % 2 == 1) {
-            iseven = false;
-            break;
-          }
-        }
-        
-        if(iseven){
-            return "All elements are even";
-        }else{
-            return "All elements are not even";
-        }
-      }
-
-      console.log(isevenarray([2, 4, 5, 6, 8, 11, 10]));
-      console.log(isevenarray([2, 4, 6, 8, 10]));
+      var num = [2, 1, 4, 6, 8];
+      var result = num.every((n) => n % 2 == 0);
+      if (result) console.log("All numbers are even");
+      else console.log("All numbers are not even");
     </script>
   </body>
 </html>

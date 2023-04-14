@@ -14,14 +14,16 @@
 				'c', 'a', 'k', 'e', '',
 				'e', 'a', 't'
 				];
-        
-        let output = [];
-        inputArr.forEach((ele, ind) => {
-            if(ele.length == 0){
-                inputArr[ind] = ele.replace('',' ');
-            }
-        });
-        console.log(inputArr.join('').split(' '));
+        var words = inputArr.toString().replaceAll(",,",", ,").replaceAll(",","");
+        console.log(words);
+
+        // let output = [];
+        // inputArr.forEach((ele, ind) => {
+        //     if(ele.length == 0){
+        //         inputArr[ind] = ele.replace('',' ');
+        //     }
+        // });
+        // console.log(inputArr.join('').split(' '));
     </script>
 </body>
 </html>
