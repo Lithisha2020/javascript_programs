@@ -82,14 +82,103 @@
 
       users = [john, pete, mary];
 
-        let usersMapped = users.map((user) => ({
-          fullName: `${user.name} ${user.surname}`,
-          id: user.id,
-        }));
+      let usersMapped = users.map((user) => ({
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id,
+      }));
 
       usersMapped.forEach((ele) =>
         document.write(ele.id + " --- " + ele.fullName + "<br/>")
       );
+      document.write("<hr/>");
+
+      //to check whether an `input` is an array or not
+      arr = [10, 20, 30];
+      let arr1 = 15;
+      function is_array(data) {
+        return Array.isArray(data);
+      }
+      document.write(arr + " is array - " + is_array(arr));
+      document.write("<br/>" + arr1 + " is array - " + is_array(arr1));
+      document.write("<hr/>");
+
+      //JavaScript function to clone an array
+      arr = [1, 2, 4, 0];
+      arr1 = [1, 2, [4, 0]];
+      function array_Clone(data) {
+        return [...data];
+      }
+      document.write(array_Clone(arr));
+      document.write("<br/>" + array_Clone(arr1));
+      document.write("<hr/>");
+
+      //javascript function to return first n element of an array
+      function first(data, n = 1) {
+        if (n < 0) return [];
+        if (data == null) return void 0;
+        return data.slice(0, n);
+      }
+      document.write(first([7, 9, 0, -2]));
+      document.write("<br/>" + first([], 3));
+      document.write("<br/>" + first([7, 9, 0, -2], 3));
+      document.write("<br/>" + first([7, 9, 0, -2], 6));
+      document.write("<br/>" + first([7, 9, 0, -2], -3) + "<br/>");
+
+      var res = first([], 3); // return void 0 i.e undefined
+      console.log(res);
+      document.write("<hr/>");
+
+      //javascript function to return lsat n element of an array
+      function last(data, n = 1) {
+        if (n < 0) return [];
+        if (data == null) return void 0;
+        var st = data.length - n;
+        if (st < 0) st = 0;
+        return data.slice(st);
+      }
+      document.write(last([7, 9, 0, -2]));
+      document.write("<br/>" + last([], 3));
+      document.write("<br/>" + last([7, 9, 0, -2], 3));
+      document.write("<br/>" + last([7, 9, 0, -2], 6));
+      document.write("<br/>" + last([7, 9, 0, -2], -3) + "<br/>");
+
+      var res = last([], 3); // return void 0 i.e undefined
+      console.log(res);
+      document.write("<hr/>");
+
+      //to join all elements
+      let myColor = ["Red", "Green", "White", "Black"];
+      document.write(myColor.toString());
+      document.write(`<br/>${myColor.join(", ")}`);
+      document.write(`<br/>${myColor.join("+")}`);
+      document.write("<hr/>");
+
+      //different locale
+      arr = [1000000.99, 100000.99, 10000.99, 1000.99, 100.99, 10.99];
+      document.write(`<br/>German`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("de-DE")}`)
+      );
+      document.write(`<br/>US`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("en-US")}`)
+      );
+      document.write(`<br/>India`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("en-IN")}`)
+      );
+      document.write("<hr/>");
+
+      //accept a number as input and insert dashes (-) between each two even numbers
+      arr = "025468";
+      var output = arr.split("");
+      console.log(output);
+      res = output.reduce((res, curr, ind) => {
+        if ((+curr % 2) == 0 && (+res[res.length-1] % 2) == 0) res = res.concat("-", curr);
+        else res = res.concat(curr);
+        return res;
+      });
+      document.write(`<br/>${res}`);
       document.write("<hr/>");
     </script>
   </body>
