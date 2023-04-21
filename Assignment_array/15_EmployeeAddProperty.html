@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //Add new property
+        let employees = [
+            {Id:5, Name:"Saranya", Salary: 5000},
+            {Id:3, Name:"Rakshu", Salary: 4500},
+            {Id:1, Name:"Lithisha", Salary: 6000},
+            {Id:4, Name:"Jaishree", Salary: 7600},
+            {Id:6, Name:"Priyanka", Salary: 4600},
+            {Id:2, Name:"Akash", Salary: 9000},
+        ];
+
+        employees.map((e)=>{
+            e.comp = "ibm";
+        });
+        console.table(employees);
+
+        //using foreach
+        employees.forEach((e)=>{
+            e.dept = "dev";
+        })
+        console.table(employees);
+    </script>
+</body>
+</html>

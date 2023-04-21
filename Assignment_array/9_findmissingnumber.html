@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let input = [2, 5, 1, 4, 9, 6, 3, 7];
+      input.sort();
+      console.log(input);
+      for (var ind in input) {
+        if (input[ind] + 1 != input[ind + 1]) {
+          console.log(input[ind] + 1);
+          break;
+        }
+      }
+
+      // input.reduce((prev, curr) => {
+      //   if(curr - prev != 1){
+      //       console.log(prev+1);
+      //   }
+      //   return curr;
+      // });
+    </script>
+  </body>
+</html>

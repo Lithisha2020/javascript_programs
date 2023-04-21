@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //Sort by Employee Id
+        let employees = [
+            {Id:5, Name:"Saranya", Salary: 50000},
+            {Id:3, Name:"Rakshu", Salary: 45000},
+            {Id:1, Name:"Lithisha", Salary: 50000},
+            {Id:4, Name:"Jaishree", Salary: 76000},
+            {Id:6, Name:"Priyanka", Salary: 46000},
+            {Id:2, Name:"Akash", Salary: 90000},
+        ];
+
+        console.table(employees);
+
+        employees.sort((e1,e2) => e1.Id - e2.Id);
+
+        console.table(employees);
+    </script>
+</body>
+</html>

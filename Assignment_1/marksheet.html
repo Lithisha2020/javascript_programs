@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let maths = +prompt("Enter Maths mark:");
+        let english = +prompt("Enter English mark:");
+        let computer = +prompt("Enter Computer mark:");
+        let average = (maths + english + computer)/3;
+        if(average > 60)
+            console.log("First class");
+        else if(average > 50)
+            console.log("Second class"); 
+        else if(average > 30)
+            console.log("Pass");
+        else
+            console.log("Fail");
+    </script>
+</body>
+</html>

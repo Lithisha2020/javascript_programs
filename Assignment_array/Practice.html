@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      //Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+      function camelize(str) {
+        return str.split("-").join("");
+      }
+
+      document.write("my-short-string" + " => " + camelize("my-short-string"));
+      document.write(
+        "<br/>list-style-image" + " => " + camelize("list-style-image")
+      );
+      document.write(
+        "<br/>-webkit-transition" + " => " + camelize("-webkit-transition")
+      );
+      document.write("<hr/>");
+
+      function filterRange(arr, a, b) {
+        var res = arr.filter((ele) => ele >= a && ele <= b);
+        return res;
+      }
+
+      let arr = [5, 3, 8, 1];
+      let filtered = filterRange(arr, 1, 4);
+      document.write(filtered);
+      document.write("<br/>" + arr);
+      document.write("<hr/>");
+
+      //a ≤ arr[i] ≤ b
+      function filterRangeInPlace(arr, a, b) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] < a || arr[i] > b) {
+            arr.splice(i, 1);
+            i--;
+          }
+        }
+      }
+
+      arr = [5, 3, 8, 1];
+      filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+      document.write(arr); // [3, 1]
+      document.write("<hr/>");
+
+      arr = [5, 2, 1, -10, 8];
+      arr.sort((a, b) => b - a);
+      document.write(arr); // 8, 5, 2, 1, -10
+      document.write("<hr/>");
+
+      arr = ["HTML", "JavaScript", "CSS"];
+
+      function copySorted(arr) {
+        return [...arr];
+      }
+
+      var sorted = copySorted(arr);
+      sorted.sort();
+      document.write(sorted); //CSS, HTML, JavaScript
+      document.write("<br/>" + arr); // HTML, JavaScript, CSS (no changes)
+      document.write("<hr/>");
+
+      let john = { name: "John", age: 25 };
+      let pete = { name: "Pete", age: 30 };
+      let mary = { name: "Mary", age: 28 };
+      let users = [john, pete, mary];
+
+      let names = users.map((ele) => ele.name);
+
+      document.write(names); // John, Pete, Mary
+      document.write("<hr/>");
+
+      john = { name: "John", surname: "Smith", id: 1 };
+      pete = { name: "Pete", surname: "Hunt", id: 2 };
+      mary = { name: "Mary", surname: "Key", id: 3 };
+
+      users = [john, pete, mary];
+
+      let usersMapped = users.map((user) => ({
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id,
+      }));
+
+      usersMapped.forEach((ele) =>
+        document.write(ele.id + " --- " + ele.fullName + "<br/>")
+      );
+      document.write("<hr/>");
+
+      //to check whether an `input` is an array or not
+      arr = [10, 20, 30];
+      let arr1 = 15;
+      function is_array(data) {
+        return Array.isArray(data);
+      }
+      document.write(arr + " is array - " + is_array(arr));
+      document.write("<br/>" + arr1 + " is array - " + is_array(arr1));
+      document.write("<hr/>");
+
+      //JavaScript function to clone an array
+      arr = [1, 2, 4, 0];
+      arr1 = [1, 2, [4, 0]];
+      function array_Clone(data) {
+        return [...data];
+      }
+      document.write(array_Clone(arr));
+      document.write("<br/>" + array_Clone(arr1));
+      document.write("<hr/>");
+
+      //javascript function to return first n element of an array
+      function first(data, n = 1) {
+        if (n < 0) return [];
+        if (data == null) return void 0;
+        return data.slice(0, n);
+      }
+      document.write(first([7, 9, 0, -2]));
+      document.write("<br/>" + first([], 3));
+      document.write("<br/>" + first([7, 9, 0, -2], 3));
+      document.write("<br/>" + first([7, 9, 0, -2], 6));
+      document.write("<br/>" + first([7, 9, 0, -2], -3) + "<br/>");
+
+      var res = first([], 3); // return void 0 i.e undefined
+      console.log(res);
+      document.write("<hr/>");
+
+      //javascript function to return lsat n element of an array
+      function last(data, n = 1) {
+        if (n < 0) return [];
+        if (data == null) return void 0;
+        var st = data.length - n;
+        if (st < 0) st = 0;
+        return data.slice(st);
+      }
+      document.write(last([7, 9, 0, -2]));
+      document.write("<br/>" + last([], 3));
+      document.write("<br/>" + last([7, 9, 0, -2], 3));
+      document.write("<br/>" + last([7, 9, 0, -2], 6));
+      document.write("<br/>" + last([7, 9, 0, -2], -3) + "<br/>");
+
+      var res = last([], 3); // return void 0 i.e undefined
+      console.log(res);
+      document.write("<hr/>");
+
+      //to join all elements
+      let myColor = ["Red", "Green", "White", "Black"];
+      document.write(myColor.toString());
+      document.write(`<br/>${myColor.join(", ")}`);
+      document.write(`<br/>${myColor.join("+")}`);
+      document.write("<hr/>");
+
+      //different locale
+      arr = [1000000.99, 100000.99, 10000.99, 1000.99, 100.99, 10.99];
+      document.write(`<br/>German`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("de-DE")}`)
+      );
+      document.write(`<br/>US`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("en-US")}`)
+      );
+      document.write(`<br/>India`);
+      arr.forEach((ele) =>
+        document.write(`<br/>${ele.toLocaleString("en-IN")}`)
+      );
+      document.write("<hr/>");
+
+      //accept a number as input and insert dashes (-) between each two even numbers
+      arr = "025468";
+      var output = arr.split("");
+      console.log(output);
+      res = output.reduce((res, curr, ind) => {
+        if ((+curr % 2) == 0 && (+res[res.length-1] % 2) == 0) res = res.concat("-", curr);
+        else res = res.concat(curr);
+        return res;
+      });
+      document.write(`<br/>${res}`);
+      document.write("<hr/>");
+    </script>
+  </body>
+</html>

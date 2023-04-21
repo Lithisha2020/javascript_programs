@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //to print a string in title case
+        var str = "welcome to react js";
+        var splitdata = str.split(" ");
+        var output = "";
+        for(var data of splitdata){
+            var firstchar = data.charAt(0);
+            data = data.replace(firstchar,firstchar.toUpperCase());
+            output = output + " " + data;
+        }
+        document.write("input:" + str);
+        document.write("<br/>output:" + output);
+    </script>
+</body>
+</html>

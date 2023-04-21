@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+        var words = inputArr.toString().replaceAll(",,",", ,").replaceAll(",","");
+        console.log(words);
+
+        // let output = [];
+        // inputArr.forEach((ele, ind) => {
+        //     if(ele.length == 0){
+        //         inputArr[ind] = ele.replace('',' ');
+        //     }
+        // });
+        // console.log(inputArr.join('').split(' '));
+    </script>
+</body>
+</html>

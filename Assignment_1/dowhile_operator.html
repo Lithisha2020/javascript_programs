@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use script';
+        let n1 = +prompt("Enter an operand1");
+        let n2 = +prompt("Enter an operand2");
+        let operator = prompt("Enter an operator + or - or * or /");
+        
+        switch(operator){
+            case '+':
+                console.log(`Addition of ${n1} and ${n2} is ${n1 + n2}`);
+                break;
+            case '-':
+                console.log(`Difference of ${n1} and ${n2} is ${n1 - n2}`);
+                break;
+            case '*':
+                console.log(`Product of ${n1} and ${n2} is ${n1 * n2}`);
+                break;
+            case '/':
+                console.log(`Division of ${n1} by ${n2} is ${n1 / n2}`);
+                break;
+            default:
+                console.log("Invalid input");
+                break;
+        }
+    </script>
+</body>
+</html>

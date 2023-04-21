@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let term1=[10,20,30,40,50];
+        let term2=[10,20,30,40,50];
+        let sum=[];
+
+        let SumofArray = (term1, term2) => {
+            for(var i=0; i<term1.length; i++){
+                sum.push(term1[i] + term2[i]);
+            }
+            return sum;
+        }
+
+        document.write(`Sum of arrays is ${SumofArray(term1, term2)}`);
+    </script>
+</body>
+</html>

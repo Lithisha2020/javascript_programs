@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //to print the first non-repeated character in a string
+        var input = prompt("Enter any string:");
+        for(var i of input){
+            // var matchRegularExpression = new RegExp(i, 'gi' );
+            // if(input.match(matchRegularExpression).length == 1){
+            //     document.write(i);
+            //     break;
+            // }
+            if(input.indexOf(i) == input.lastIndexOf(i)){
+                document.write(i);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
